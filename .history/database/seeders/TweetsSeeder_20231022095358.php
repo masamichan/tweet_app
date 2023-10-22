@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Tweet;
+use App\App\Models\Tweet;
 
 class TweetsSeeder extends Seeder
 {
@@ -20,7 +20,7 @@ class TweetsSeeder extends Seeder
             'content' => Str::random(100),
             'created_at' => now(),
             'updated_at' => now(),
+            Tweet::factory()->count(10)->create();
         ]);
-        tweet::factory()->count(10)->create();
     }
 }

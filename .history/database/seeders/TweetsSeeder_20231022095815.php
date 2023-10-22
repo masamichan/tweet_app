@@ -20,7 +20,8 @@ class TweetsSeeder extends Seeder
             'content' => Str::random(100),
             'created_at' => now(),
             'updated_at' => now(),
+
         ]);
-        tweet::factory()->count(10)->create();
+        Tweet::factory()->count(10)->create();
     }
 }
